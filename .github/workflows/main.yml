@@ -1,0 +1,6 @@
+- name: Send message to MS Teams (webhook)
+steps:
+  - uses: neonidian/teams-notify-build-status@v4.1.0
+    with:
+      webhookUrl: ${{ secrets.TEAMS_WEBHOOK_URL }}   # Secret name is "TEAMS_INCOMING_WEBHOOK_URL"
+      message: Workflow run passed !!
